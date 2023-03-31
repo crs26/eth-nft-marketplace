@@ -2,10 +2,10 @@ import { ethers } from "hardhat";
 
 async function main() {
 
-  const Main = await ethers.getContractFactory("Main");
-  const lock = await Main.deploy();
+  const MarketPlace = await ethers.getContractFactory("MarketPlace");
+  const marketPlace = await MarketPlace.deploy();
 
-  await lock.deployed();
+  await marketPlace.deployed();
 }
 
 main().catch((error) => {
